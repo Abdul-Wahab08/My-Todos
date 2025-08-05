@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>MyTodos</title>
+</head>
+
+<body class="bg-[#aadf9a]">
+    <nav class="bg-[#254f1a] flex justify-around items-center h-15 flex-row text-[#d2e823]">
+        <h1 class="text-xl sm:text-3xl font-bold">MyTodos</h1>
+        <ul class="flex justify-center items-center gap-4">
+            <a href="">
+                <li class="font-semibold hover:font-bold cursor-pointer">Home</li>
+            </a>
+            <a href="">
+                <li class="font-semibold hover:font-bold cursor-pointer">About</li>
+            </a>
+            <a href="">
+                <li class="font-semibold hover:font-bold cursor-pointer">Contact Us</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="main bg-[#254f1a] mx-auto min-h-[80vh] w-[90%] md:w-2/3 my-6 rounded-lg text-[#d2e823] mb-6">
+        <div class="flex justify-center items-center flex-col gap-1">
+            <h2 class="text-lg sm:text-xl md:text-2xl font-bold my-6 text-center">MyTodos - Manage Your Todos on one
+                Place</h2>
+            <div class="flex justify-between items-center w-2/3 flex-row gap-1">
+                <input class="bg-[#e0e7ad] w-[100%] text-green-900 p-2 m-2 rounded-full border-none" type="text"
+                    id="inp" placeholder="Enter your Todo">
+                <button class="btn bg-[#1f810a] p-2 rounded-full cursor-pointer hover:bg-green-600 transition"
+                    id="btn">Add</button>
+            </div>
+            <div class="flex items-center m-2">
+                <input type="checkbox" id="checkbox" class="mx-2">
+                <label>Show Finished</label>
+            </div>
+            <div class="bg-[#d2e823] h-[0.5px] w-[80%] opacity-50 my-4 text-center"></div>
+        </div>
+        <div class="displaytodos">
+            <h2 class="mx-4 font-bold text-lg sm:text-xl">Your Todos</h2>
+            <div class="todos mx-4 my-2 font-semibold flex">
+                <ul class="flex justify-around gap-3 flex-col" id="todos"></ul>
+                <p id="emptyMessage">No Todos to Display.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
